@@ -1,0 +1,48 @@
+# Modified on Jan. 11, 2016
+###########
+# Configs #
+###########
+# To Support C++11
+CONFIG += c++11
+
+# To enable msse3
+QMAKE_CXXFLAGS += -msse3
+
+#############
+# Libraries #
+#############
+
+# Bumblebee2 Libraries
+INCLUDEPATH += /usr/include/triclops
+INCLUDEPATH += /usr/include/flycapture
+LIBS += -L/usr/lib \
+    -ltriclops \
+    -lflycapture \
+    -lflycapturegui \
+    -lflycapture2bridge \
+    -lflycapture-c \
+    -lpnmutils \
+
+# Hokuyo Libraries
+LIBS += -L/usr/local/lib \
+    -lurg_cpp
+
+# OpenCV Libraries
+LIBS += -lopencv_core -lopencv_highgui -lopencv_imgproc
+
+# Boost Libraries
+LIBS += -L/usr/lib/x86_64-linux-gnu \
+    -lboost_thread \
+    -lboost_system \
+    -lboost_date_time
+
+# Eigen Libraries
+INCLUDEPATH += /usr/local/include/eigen3
+
+# PCL Libraries
+INCLUDEPATH += /usr/include/pcl-1.7
+LIBS += \
+    -lpcl_common \
+    -lpcl_io \
+    -lpcl_sample_consensus \
+    -lpcl_segmentation \
