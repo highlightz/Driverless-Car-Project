@@ -9,3 +9,6 @@ OpenCV Library
 Boost Library
 C/C++ Library
 Customized Library
+
+# General Principles
+Writing comments while coding, is necessary, because you will almost never remember what you have wanted to do later.
